@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-50 md:bg-white">
+  <div class="md:grid md:grid-cols-3 max-w-[900px] mx-auto ">
+
+    <!----------------     side image      --------------->
+
+    <div
+      class="bg-[url('images/bg-sidebar-mobile.svg')] h-[200px] w-full bg-no-repeat bg-cover md:bg-[url('images/bg-sidebar-desktop.svg')] md:h-[550px] md:w-[250px] md:mx-auto md:my-5 md:rounded-lg ">
+
+      <div class="flex justify-center gap-4 pt-5 md:flex md:flex-col md:mx-9 md:my-5 md:gap-6">
+        
+
+        <div class="flex gap-2">
+          <span class="step step1 border border-white bg-white rounded-full py-1 px-3  text-black font-bold">1</span>
+          <div class="hidden md:block md:flex md:flex-col text-nowrap ">
+            <span class="text-xs">STEP1</span>
+            <p class="text-xs text-white font-bold">YOUR INFO</p>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <span class="step step2 border border-white rounded-full py-1 px-3  text-white font-bold">2</span>
+          <div class="hidden md:block md:flex md:flex-col text-nowrap ">
+            <span class="text-xs">STEP2</span>
+            <p class="text-xs text-white font-bold">SELECT PLAN</p>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <span class="step step3 border border-white rounded-full py-1 px-3  text-white font-bold">3</span>
+          <div class="hidden md:block md:flex md:flex-col text-nowrap ">
+            <span class="text-xs">STEP3</span>
+            <p class="text-xs text-white font-bold">ADD-ONS</p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <span class="step step4 border border-white rounded-full py-1 px-3  text-white font-bold">4</span>
+          <div class="hidden md:block md:flex md:flex-col text-nowrap ">
+            <span class="text-xs">STEP4</span>
+            <p class="text-xs text-white font-bold">SUMMARY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------- first page personal info ------------------->
+
+
+    <div
+      class="personalInfo mx-6 border relative  -top-20 bg-white rounded-lg  pt-5 md:static md:w-5/6 md:my-9 md:mx-auto col-span-2 md:border-0">
+      <span class="mx-4 text-2xl font-bold">Personal info</span>
+      <p class="ml-4 my-4 text-gray-500">Please provide your name, email address and phone number.</p>
+
+      <!-----  form   --------->
+
+      <form>
+
+     <div>
+      <label class="mx-4 my-4">Name</label><br>
+      <input type="text" name="name" placeholder="e.g Stephen King" class="form-name border rounded-md mx-4 mb-3 p-2 w-5/6 "><br>
+      <div class="flex justify-end pr-5 mr-9">
+        <span id="nameError" class="hidden text-sm text-red-700 ">This field is required.</span><br>
+      </div>
+      <label class="mx-4 my-4">Email Address</label><br>
+      <input type="text" name="email" placeholder="e.g stephenking@lorem.com"
+        class="form-email border rounded-md mx-4 mb-3 p-2 w-5/6"><br>
+      <div class="flex justify-end pr-5 mr-9">
+        <span id="emailError" class="hidden text-sm text-red-700 ">This field is required.</span><br>
+      </div>
+        <label class="mx-4 my-4">Phone Number</label><br>
+      <input type="phone" placeholder="e.g +1 234 567 890" class="form-phNum border rounded-md mx-4 mb-3 p-2 w-5/6"><br>
+      <div class="flex justify-end pr-5 mr-9">
+        <span id="PhError" class="hidden text-sm text-red-700 ">This field is required.</span>
+      </div>
+     </div>
+      </form>
+      <!-- next page button -->
+
+      <div class="fixed left-0 bottom-0 py-4 bg-white w-full flex justify-end md:static md:mt-[60px]">
+        <button type="button" id="nextPage" class="bg-blue-700 px-3 py-3 mx-4 rounded-md text-white">Next Step</button>
+      </div>
+    </div>
+
+    <!-------------- second page select Plan ------------------->
+
+    <div
+      class="selectplan hidden mx-6 border relative  -top-20 bg-white rounded-lg  pt-5 md:static md:w-5/6 md:my-9 md:mx-auto col-span-2 md:border-0">
+      <span class="mx-4 text-2xl font-bold">Select your Plan</span>
+      <p class="mx-4 my-2 text-gray-500">You have the option of monthly or yearly billing.</p>
+
+      <!-- options to select plan -->
+
+      <div class="plan-options mx-2 py-2 md:flex md:gap-3 ">
+        <div class="arcade flex gap-4 px-2 border border-black m-2 mb-3 rounded-lg md:flex-col md:px-3 md:w-1/3">
+          <img src="images/icon-arcade.svg" class="md:mr-[50px] my-4">
+          <div class="arcade-details flex flex-col">
+            <span class="arcade-name font-bold pt-2">Arcade</span>
+            <span class=" cost arcade-cost text-gray-400 font-bold md:text-xs">$9/mo</span>
+            <span class="free invisible text-sm mb-2">2 months free</span>
+          </div>
+        </div>
+        <div class="advanced flex gap-4  px-2 border m-2 mb-3 rounded-lg md:flex-col md:px-3 md:w-1/3">
+          <img src="images/icon-advanced.svg" class="md:mr-[50px] my-4">
+          <div class="advanced-details flex flex-col ">
+            <span class="advanced-name font-bold pt-2">Advanced</span>
+            <span class="cost advanced-cost text-gray-400 font-bold md:text-xs">$12/mo</span>
+            <span class="free invisible text-sm mb-2">2 months free</span>
+          </div>
+        </div>
+        <div class="pro flex gap-4 px-2 border m-2 mb-3 rounded-lg md:flex-col md:px-3 md:w-1/3">
+          <img src="images/icon-pro.svg" class="md:mr-[50px] my-4">
+          <div class="pro-details flex flex-col ">
+            <span class="pro-name font-bold pt-2">Pro</span>
+            <span class=" cost pro-cost text-gray-400 font-bold md:text-xs">$15/mo</span>
+            <span class="free invisible text-sm mb-2">2 months free</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- toggle button to change plan -->
+
+      <div class="flex bg-gray-200 mx-4 my-4 py-4 justify-center rounded-lg">
+        <span>Monthly</span>
+        <div class="toggle w-[45px] h-6 bg-blue-700 rounded-full mx-3 cursor-pointer">
+          <div class="toggleBall w-4 h-4 ml-1 my-1 bg-white rounded-full "></div>
+        </div>
+        <span>Annually</span>
+      </div>
+
+
+      <!-- next page button -->
+
+      <div class=" footer fixed right-0 bottom-0 py-4 bg-white w-full px-3 flex justify-between md:static md:mt-[80px]">
+        <button type="button" id="selectplan-previousButton" class=" px-3 py-3 mx-4 rounded-md text-gray-500">Go
+          Back</button>
+        <button type="button" id="selectplan-nextButton"
+          class="bg-blue-700 px-3 py-3 mx-4 rounded-md text-white md:mr-0">Next Step</button>
+
+      </div>
+
+    </div>
+
+    <!-------------------   third page add-ons    ------------------------->
+
+    <div
+      class="pick-add-ons hidden mx-6 border relative  -top-20 bg-white rounded-lg  pt-5 md:static md:mx-auto md:my-9 md:w-5/6 col-span-2 md:border-0">
+      <span class="mx-4 text-2xl font-bold">Pick add-ons</span>
+      <p class="mx-4 my-4 text-gray-500">Add ons help enhance your gaming experience.</p>
+
+
+      <div class="add-ons mx-2 py-2 ">
+        <div class="add-ons1 onlineService flex gap-4 px-2 border m-2 mb-3 rounded-lg">
+          <input type="checkbox" class="w-5 h-5 border rounded-lg mt-4">
+          <div class="add-ons1-details flex w-4/6 flex-col">
+            <span class="font-bold pt-2">Online service</span>
+            <span class=" text-gray-400 font-bold text-sm mb-3">Access to multiplayer games</span>
+          </div>
+          <span class="add-on-cost text-gray-400 font-bold text-sm mt-5 ">+$1/m</span>
+        </div>
+
+        <div class="add-ons2 largerStorage flex gap-4 px-2 border m-2 mb-3 rounded-lg">
+          <input type="checkbox" class="w-5 h-5 border rounded-lg mt-4">
+          <div class="add-ons2-details flex w-4/6 flex-col">
+            <span class="font-bold pt-2">Larger storage</span>
+            <span class="text-gray-400 font-bold text-sm mb-3">Extra 1TB of cloud save</span>
+          </div>
+          <span class="add-on-cost text-gray-400 font-bold text-sm mt-5 ">+$2/m</span>
+        </div>
+
+        <div class="add-ons3 customizeProfile flex gap-4 px-2 border m-2 mb-3 rounded-lg">
+          <input type="checkbox" class="w-5 h-5 border rounded-lg mt-4">
+          <div class="add-ons3-details flex w-4/6 flex-col">
+            <span class="font-bold pt-2">Customizable profile</span>
+            <span class=" text-gray-400 font-bold text-sm mb-3">Custom theme on your profile</span>
+          </div>
+          <span class="add-on-cost text-gray-400 font-bold text-sm mt-5">+$2/m</span>
+        </div>
+
+      </div>
+
+      <!-- next page button -->
+
+      <div class=" footer fixed right-0 bottom-0 py-4 bg-white w-full px-3 flex justify-between md:static md:mt-[80px]">
+        <button type="button" id="add-ons-previousButton" class=" px-3 py-3 mx-4 rounded-md text-gray-500">Go
+          Back</button>
+        <button type="button" id="add-ons-nextButton"
+          class="bg-blue-700 px-3 py-3 mx-4 rounded-md text-white md:mr-0">Next Step</button>
+
+      </div>
+
+    </div>
+
+    <!---------fourth page finishing up    ------------>
+
+    <div
+    class="finishing-up hidden mx-6 border relative  -top-20 bg-white rounded-lg  pt-5 md:static md:mx-auto md:my-9 md:w-5/6 col-span-2 md:border-0">
+
+      <span class="mx-4 text-2xl font-bold">finishing up</span>
+      <p class="mx-4 my-4 text-gray-500">Double check everything looks OK before confirming.</p>
+
+      <div class="finishing mx-4 py-2 bg-blue-50 rounded-lg">
+        <div class="finishArcade flex justify-between px-2 border-b-2 m-3 mb-3 rounded-lg">
+          <div class="finishArcade-details flex flex-col my-1 mx-2 ">
+            <span class="finishup-plan-name font-bold pt-2">Arcade (Monthly)</span>
+            <button type="button" class="goToPlanPage btn text-blue-500 text-left">Change</button>
+          </div>
+          <span class="finishup-plan-cost finishupcost  text-gray-400 font-bold text-sm mt-5 mx- 4">+$9/m</span>
+        </div>
+
+        <div tabindex="0" class="finishonlineService hidden flex justify-between px-2  m-3 mb-3 rounded-lg -4 ">
+          <div class="finishOnlineService-details flex flex-col my-1 mx-2 ">
+            <span class="font-bold pt-2 text-gray-400">Online service</span>
+            <!-- <button type="button" class="hidden btn text-gray-500 text-left">Change</button> -->
+          </div>
+          <span class="onlineService-cost finishupcost text-gray-400 font-bold text-sm mt-5 mx- 4">+$1/m</span>
+        </div>
+
+        <div class="finishlargerStorage hidden flex justify-between px-2  m-3 mb-3 rounded-lg">
+          <div class="finishlargerStorage-details flex flex-col my-1 mx-2 ">
+            <span class="font-bold pt-2 text-gray-400">Larger storage</span>
+            <!-- <button type="button" class="hidden btn text-gray-500 text-left">Change</button> -->
+          </div>
+          <span class="largerStorage-cost finishupcost text-gray-400 font-bold text-sm mt-5 mx- 4">+$2/m</span>
+        </div>
+
+        <div class="finishcustomizeProfile hidden flex justify-between px-2  m-3 mb-3 rounded-lg">
+          <div class="finishcustomizeProfile-details flex flex-col my-1 mx-2 ">
+            <span class="font-bold pt-2 text-gray-400">Customizable profile</span>
+            <!-- <button type="button" class="hidden btn text-gray-500 text-left">Change</button> -->
+          </div>
+          <span class="customizeProfile-cost finishupcost text-gray-400 font-bold text-sm mt-5 mx- 4">+$2/m</span>
+        </div>
+
+      </div>
+
+      <div class="finish-total flex justify-between px-2  m-4 mb-3 rounded-lg">
+        <div class="finish-total-details flex flex-col my-1 mx-2 ">
+          <span class="font-bold pt-2 pl-2 text-gray-400">Total (per month)</span>
+        </div>
+        <span class="total-cost font-bold mt-2 mx- 4 pr-2 text-blue-500 text-lg">+$9/m</span>
+      </div>
+
+      <!-- next page button -->
+
+      <div class=" footer fixed right-0 bottom-0 py-4 bg-white w-full px-3 flex justify-between md:static md:mt-[80px]">
+        <button type="button" id="finishup-previousPage" class=" px-3 py-3 mx-4 rounded-md text-gray-500">Go Back</button>
+        <button type="button" id="finishup-nextPage"
+          class="bg-blue-700 px-3 py-3 mx-4 rounded-md text-white md:mr-0">Confirm</button>
+
+      </div>
+
+    </div>
+
+    <!----------------      thank you page      ------------------------->
+
+    <div
+      class="thankyou hidden flex-col text-center justify-center md:self-center mx-6 px-6 border relative  -top-20 bg-white rounded-lg  pt-5 md:static md:my-9 md:mx-auto col-span-2 md:border-0">
+
+      <div>
+        <img src="images/icon-thank-you.svg" class="mx-auto my-4">
+      </div>
+
+      <div>
+        <span class="m-6 font-bold text-2xl">Thank you!</span>
+      </div>
+
+      <div>
+        <p class="m-6 text-sm text-gray-500">Thank you for confirming your subscription! We hope you have fun using the
+          platform. If you ever need support, please feel free to mail us at support@loremgaming.com</p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
